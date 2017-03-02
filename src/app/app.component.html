@@ -1,24 +1,44 @@
 <mz-navbar>
-    <a [id]="'btn-sidenav-demo'" href="#" class="brand-logo">&nbsp;<i class="fa fa-television" aria-hidden="true"></i>&nbsp;DevOps Portal</a>
+    <a (click)="toggleSideBar()" class="brand-logo">&nbsp;<i class="fa fa-television" aria-hidden="true"></i>&nbsp;DevOps Portal</a>
     <mz-navbar-item-container [align]="'right'">
         <mz-navbar-item><a href="#">Sass</a></mz-navbar-item>
         <mz-navbar-item><a href="#">Components</a></mz-navbar-item>
         <mz-navbar-item><a routerLink="js">JavaScript</a></mz-navbar-item>
     </mz-navbar-item-container>
 </mz-navbar>
-<mz-sidenav [id]="'sidenav-demo'" [collapseButtonId]="'btn-sidenav-demo'">
-    <mz-sidenav-collapsible>
-        <mz-sidenav-collapsible-header>
-            <i mz-icon-mdi [icon]="'menu-right'" class="caret"></i>Collapsible
-        </mz-sidenav-collapsible-header>
-        <mz-sidenav-collapsible-content>
-            <mz-sidenav-link>
-                <a href="#" class="waves-effect">First Link</a>
-            </mz-sidenav-link>
-            <mz-sidenav-link>
-                <a href="#" class="waves-effect">Second Link</a>
-            </mz-sidenav-link>
-        </mz-sidenav-collapsible-content>
-    </mz-sidenav-collapsible>
-</mz-sidenav>
-{{title}}
+
+<div id="wrapper">
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <div class="sidebar-brand">
+                <div class="user">Chirag Sane</div>
+            </div>
+            <div class="sidebar-brand" id="btn-dropdown-demo">
+                <i class="fa fa-user-o fa-lg" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Administrator&nbsp;&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i>
+                <mz-dropdown [id]="'dropdown-demo'" [dropdownButtonId]="'btn-dropdown-demo'" [align]="'right'" [belowOrigin]="true" [gutter]="true" [inDuration]="300" [outDuration]="300" [stopPropagation]="true">
+                    <mz-dropdown-item><a>Profile</a></mz-dropdown-item>
+                    <mz-dropdown-item><a>Settings</a></mz-dropdown-item>
+                    <mz-dropdown-divider></mz-dropdown-divider>
+                    <mz-dropdown-item><a>Logout</a></mz-dropdown-item>
+                </mz-dropdown>
+            </div>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Shortcuts</a></li>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Simple Sidebar</h1>
+                    {{title}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Your Component';
+  toggleSideBar() {
+		document.getElementById("wrapper").classList.toggle('toggled');
+	}
 }

@@ -9,8 +9,4 @@ html {
     font-family: 'Comfortaa', cursive;
 }
 
-@media (min-width: 992px) {
-    html {
-        /*margin-left: 300px;*/
-    }
-}
+@media (min-width: 992px) {}
