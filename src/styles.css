@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+nav {
+    background-color: #00bcd4 !important;
+}
+
+html {
+    font-family: 'Comfortaa', cursive;
+}
+
+@media (min-width: 992px) {
+    html {
+        /*margin-left: 300px;*/
+    }
+}
