@@ -1,26 +1,26 @@
 <mz-navbar>
-    <a (click)="toggleSideBar()" class="brand-logo">&nbsp;<i class="fa fa-television" aria-hidden="true"></i>&nbsp;DevOps Portal</a>
+    <a (click)="toggleSideBar()" class="brand-logo">&nbsp;<i class="fa fa-desktop" aria-hidden="true"></i>DevOps Portal</a>
     <mz-navbar-item-container [align]="'right'">
         <mz-navbar-item><a href="#">Sass</a></mz-navbar-item>
         <mz-navbar-item><a href="#">Components</a></mz-navbar-item>
-        <mz-navbar-item><a routerLink="js">JavaScript</a></mz-navbar-item>
+        <mz-navbar-item><a><i class="fa fa-comment fa-lg navIcon" aria-hidden="true"></i></a></mz-navbar-item>
     </mz-navbar-item-container>
 </mz-navbar>
 
 <div id="wrapper">
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <div class="sidebar-brand">
-                <div class="user">Chirag Sane</div>
-            </div>
+            <div class="sidebar-brand">Chirag Sane</div>
             <div class="sidebar-brand" id="btn-dropdown-demo">
-                <i class="fa fa-user-o fa-lg" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Administrator&nbsp;&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i>
-                <mz-dropdown [id]="'dropdown-demo'" [dropdownButtonId]="'btn-dropdown-demo'" [align]="'right'" [belowOrigin]="true" [gutter]="true" [inDuration]="300" [outDuration]="300" [stopPropagation]="true">
-                    <mz-dropdown-item><a>Profile</a></mz-dropdown-item>
-                    <mz-dropdown-item><a>Settings</a></mz-dropdown-item>
-                    <mz-dropdown-divider></mz-dropdown-divider>
-                    <mz-dropdown-item><a>Logout</a></mz-dropdown-item>
-                </mz-dropdown>
+                <div class="user">
+                    <i class="fa fa-user-o fa-lg" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Administrator&nbsp;&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i>
+                    <mz-dropdown [id]="'dropdown-demo'" [dropdownButtonId]="'btn-dropdown-demo'" [align]="'right'" [belowOrigin]="true" [gutter]="true" [stopPropagation]="true">
+                        <mz-dropdown-item><a class="user"><i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Profile</a></mz-dropdown-item>
+                        <mz-dropdown-item><a class="user"><i class="fa fa-cog fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Settings</a></mz-dropdown-item>
+                        <mz-dropdown-divider></mz-dropdown-divider>
+                        <mz-dropdown-item><a class="user"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Logout</a></mz-dropdown-item>
+                    </mz-dropdown>
+                </div>
             </div>
             <li><a href="#">Dashboard</a></li>
             <li><a href="#">Shortcuts</a></li>
